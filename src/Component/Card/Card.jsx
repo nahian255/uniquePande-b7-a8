@@ -4,7 +4,6 @@ import { faCoffee, faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const Card = (props) => {
     const { picture, blogTitle, authorName, authorImg, publishDate, readTime } = props.card;
-    const { handelAddToBook } = props.handelAddToBook;
     return (
         <div>
             <div className="card max-w-2xl mt-3 mx-8 p-4 bg-base-100 shadow-xl">
@@ -22,11 +21,12 @@ const Card = (props) => {
                         </div>
                         <div className='flex'>
                             <p className='mr-4 '>{readTime} min read</p>
-                            <FontAwesomeIcon onClick={() => handelAddToBook()} icon={faBookmark} />
+                            <FontAwesomeIcon onClick={() => props.addToBookmark(blogTitle)} icon={faBookmark} />
+                            <button  >ooo</button>
                         </div>
                     </div>
                     <p className='text-3xl text-white'>{blogTitle}</p>
-                    <p>mark as a read</p>
+                    <p onClick={() => props.addToTime(readTime)}>mark as a read</p>
                     <FontAwesomeIcon icon={faCoffee} />
                 </div>
             </div>

@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Blog from '../Blog/Blog';
 import BookMark from '../Bookmark/BookMark';
 import './Main.css'
 
 const Main = () => {
+    const [card, setCard] = useState([])
 
-    const handelAddToBook = () => {
-        console.log('clicked');
+    const addToBookmark = (blogTitle) => {
+        setCard(blogTitle)
     }
+    const addToTime = () => {
+        console.log('payci');
+    }
+
     return (
         <div className=''>
             <div className='flex'>
-                <Blog handelAddToBook={handelAddToBook}></Blog>
-                <BookMark></BookMark>
+                <Blog
+                    addToBookmark={addToBookmark}
+                    addToTime={addToTime}
+                ></Blog>
+                <BookMark card={card}></BookMark>
             </div>
         </div>
     );
