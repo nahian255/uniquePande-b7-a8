@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import Blog from '../Blog/Blog';
 import BookMark from '../Bookmark/BookMark';
-import './Main.css'
+import './Main.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Main = () => {
     const [card, setCard] = useState([])
@@ -9,9 +11,13 @@ const Main = () => {
 
 
     // bookmark button
-    const addToBookmark = (blogTitle) => {
+    const addToBookmark = (blogTitle, id) => {
+
         const newTitle = [...card, blogTitle]
         setCard(newTitle)
+
+        toast(" BookMark  Added !")
+
     }
 
 
@@ -39,6 +45,7 @@ const Main = () => {
                     time={time}
                     card={card}></BookMark>
             </div>
+            <ToastContainer />
         </div>
     );
 };

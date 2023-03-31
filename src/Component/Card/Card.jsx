@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const Card = (props) => {
-    const { picture, blogTitle, authorName, authorImg, publishDate, readTime } = props.card;
+    const { _id, picture, blogTitle, authorName, authorImg, publishDate, readTime } = props.card;
     return (
         <div>
             <div className="card max-w-2xl mt-3 mx-8 p-4 bg-base-100 shadow-xl">
@@ -26,7 +26,7 @@ const Card = (props) => {
                         </div>
                         <div className='flex'>
                             <p className='mr-4 '>{readTime} min read</p>
-                            <FontAwesomeIcon onClick={() => props.addToBookmark(blogTitle)} icon={faBookmark} />
+                            <FontAwesomeIcon onClick={() => props.addToBookmark(blogTitle, _id)} icon={faBookmark} />
                         </div>
                     </div>
                     <p className='text-3xl text-white'>{blogTitle}</p>

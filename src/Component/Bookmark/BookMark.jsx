@@ -2,7 +2,7 @@ import React from 'react';
 import Title from '../Title/Title';
 
 const BookMark = ({ card, time }) => {
-    console.log(card);
+
     return (
         <div className='bg-green-100 w-1/4 sticky top-0 h-52'>
             <p className='py-8 bg-lime-200 px-4 text-xl'>Spent time on read :{time} min</p>
