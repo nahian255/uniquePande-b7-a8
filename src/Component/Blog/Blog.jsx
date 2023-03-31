@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Card from '../Card/Card';
+import Footer from '../footer/Footer';
 import "./Blog.css"
 
 const Blog = ({ addToBookmark, addToTime }) => {
@@ -20,7 +21,10 @@ const Blog = ({ addToBookmark, addToTime }) => {
                     addToTime={addToTime}
                     card={card}
                 ></Card>)
+
+
             }
+            <Footer></Footer>
         </div>
     );
 };
