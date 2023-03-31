@@ -11,22 +11,26 @@ const Card = (props) => {
                 <div className="card-body">
                     <div className='flex justify-between'>
                         <div className='flex'>
-                            <div className="w-10 mr-3 rounded-full">
-                                <img src={authorImg} />
+                            <div className="dropdown dropdown-end">
+                                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                    <div className="w-10 rounded-full">
+                                        <img src={authorImg} />
+                                    </div>
+                                </label>
+
                             </div>
-                            <div>
-                                <p className='text-lg'>{authorName}</p>
-                                <p>{publishDate}</p>
+                            <div className='text-lg mx-4'>
+                                <p >{authorName}</p>
+                                <p>{publishDate}(4 Days ago)</p>
                             </div>
                         </div>
                         <div className='flex'>
                             <p className='mr-4 '>{readTime} min read</p>
                             <FontAwesomeIcon onClick={() => props.addToBookmark(blogTitle)} icon={faBookmark} />
-                            <button  >ooo</button>
                         </div>
                     </div>
                     <p className='text-3xl text-white'>{blogTitle}</p>
-                    <button onClick={() => props.addToTime(readTime)}>mark as read</button>
+                    <button className='text-gray-700 w-28 mt-3 bg-orange-200 text-lg' onClick={() => props.addToTime(readTime)}>mark as read</button>
 
                 </div>
             </div>

@@ -10,7 +10,8 @@ const Main = () => {
 
     // bookmark button
     const addToBookmark = (blogTitle) => {
-        setCard(blogTitle)
+        const newTitle = [...card, blogTitle]
+        setCard(newTitle)
     }
 
 
