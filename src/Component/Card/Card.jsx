@@ -26,8 +26,8 @@ const Card = (props) => {
                         </div>
                     </div>
                     <p className='text-3xl text-white'>{blogTitle}</p>
-                    <p onClick={() => props.addToTime(readTime)}>mark as a read</p>
-                    <FontAwesomeIcon icon={faCoffee} />
+                    <button onClick={() => props.addToTime(readTime)}>mark as read</button>
+
                 </div>
             </div>
         </div>

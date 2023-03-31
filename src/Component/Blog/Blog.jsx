@@ -15,6 +15,7 @@ const Blog = ({ addToBookmark, addToTime }) => {
         <div className='bg-red-200 w-9/12'>
             {
                 blog.map((card) => <Card
+                    key={card._id}
                     addToBookmark={addToBookmark}
                     addToTime={addToTime}
                     card={card}
