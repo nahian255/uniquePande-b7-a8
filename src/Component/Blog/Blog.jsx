@@ -12,7 +12,7 @@ const Blog = ({ addToBookmark, addToTime }) => {
             .then(data => setBlog(data))
     }, [])
     return (
-        <div className='bg-red-200 w-9/12'>
+        <div className=' w-9/12'>
             {
                 blog.map((card) => <Card
                     key={card._id}

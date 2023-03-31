@@ -1,13 +1,13 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faBookmark } from '@fortawesome/free-solid-svg-icons'
+import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const Card = (props) => {
     const { picture, blogTitle, authorName, authorImg, publishDate, readTime } = props.card;
     return (
         <div>
             <div className="card max-w-2xl mt-3 mx-8 p-4 bg-base-100 shadow-xl">
-                <figure><img className='' src={picture} /></figure>
+                <figure><img className='w-full h-3/4' src={picture} /></figure>
                 <div className="card-body">
                     <div className='flex justify-between'>
                         <div className='flex'>

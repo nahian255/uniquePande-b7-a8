@@ -30,7 +30,7 @@ const Main = () => {
 
     return (
         <div className=''>
-            <div className='flex'>
+            <div className='lg:flex md:flex'>
                 <Blog
                     addToBookmark={addToBookmark}
                     addToTime={addToTime}

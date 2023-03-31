@@ -6,7 +6,7 @@ const Header = () => {
         <div>
             <div className="navbar bg-base-100">
                 <div className="flex-1">
-                    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    <a className="btn btn-ghost normal-case text-xl">Knowledge Hunter</a>
                 </div>
                 <div className="flex-none gap-2">
 
